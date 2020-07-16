@@ -8,7 +8,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
@@ -26,6 +26,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
+add_subdirectory(fmt)
+
 if(ANDROID)
   add_library(keyboard SHARED
     main.cpp
@@ -39,5 +41,5 @@ else()
     mainwindow.h
   )
 endif()
-
+target_link_libraries(keyboard PRIVATE fmt)
 target_link_libraries(keyboard PRIVATE Qt5::Widgets)
