@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/fmtlib/fmt.git
+	branch = master
+	commit = c26349f4d25d4542d99092afb9a4f9f141afb900
+	parent = 4b94d933b42b941301876d43ea03eae0627f0da3
+	method = merge
+	cmdver = 0.4.0
